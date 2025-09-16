@@ -170,21 +170,20 @@ impl Game {
         // sub-folder.
         // (c) Team Cherry
 
-        let steam_userid_dir = fs::read_dir(&savefile_path)?.flatten().find_map(|entry| {
-            (entry
-                .file_name()
-                .to_string_lossy()
-                .bytes()
-                .all(|b| b.is_ascii_digit())
-                && entry.file_type().ok()?.is_dir())
-            .then_some(entry.path())
-        });
+        let subfolder = fs::read_dir(&savefile_path)?
+            .flatten()
+            .find_map(|entry| {
+                (entry
+                    .file_name()
+                    .to_string_lossy()
+                    .bytes()
+                    .all(|b| b.is_ascii_digit())
+                    && entry.file_type().ok()?.is_dir())
+                .then_some(entry.path())
+            })
+            .unwrap_or_else(|| "default".into());
 
-        let file_path = format!("user{save}.dat");
-        Ok(steam_userid_dir.map_or_else(
-            || savefile_path.join(&file_path),
-            |steam_userid_dir| steam_userid_dir.join(&file_path),
-        ))
+        Ok(subfolder.join(format!("user{save}.dat")))
     }
 
     fn from_path(savefile_path: &PathBuf) -> Self {
