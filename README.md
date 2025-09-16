@@ -111,6 +111,64 @@ The tool creates (or appends to) two files:
 -   `{game}-{save}.json` - JSON representation of the save file
 -   `{game}-{save}.log` - Log of all changes detected
 
+Example output:
+
+```json
+[2025-09-10 13:50:19.1053902 +03:00:00] Change #10 detected:
+  playerData.HeroCorpseMarkerGuid: null -> "HtdHrq1NO02NyYPJ4NjRpA=="
+  playerData.FisherWalkerDirection: false -> true
+  playerData.FisherWalkerIdleTimeLeft: -0.00288200425 -> 48.22196
+  playerData.FisherWalkerTimer: 44.7499161 -> -0.00561722228
+  playerData.HeroCorpseMoneyPool: 0 -> 1013
+  playerData.HeroCorpseScene: "" -> "Song_Tower_01"
+  playerData.HeroDeathScenePos.x: 67.47 -> 53.51
+  playerData.HeroDeathScenePos.y: 16.84 -> 102.620064
+  playerData.HeroDeathSceneSize.x: 124.0 -> 130.0
+  playerData.HeroDeathSceneSize.y: 56.0 -> 140.0
+  playerData.IsSilkSpoolBroken: false -> true
+  playerData.LastSetFieldName: "HasSeenGeoMid" -> "encounteredLaceTower"
+  playerData.QuestCompletionData.savedData[28].Data.IsCompleted: false -> true
+  playerData.QuestCompletionData.savedData[28].Data.WasEverCompleted: false -> true
+  playerData.QuestCompletionData.savedData[43]: null -> {"Data":{"CompletedCount":0,"HasBeenSeen":false,"IsAccepted":true,"IsCompleted":false,"WasEverCompleted":false},"Name":"Citadel Ascent Lift"}
+  playerData.QuestPaneHasNew: false -> true
+  playerData.UnlockedMelodyLift: false -> true
+  playerData.encounteredLaceTower: false -> true
+  playerData.environmentType: 4 -> 0
+  playerData.geo: 1013 -> 0
+  playerData.health: 3 -> 0
+  playerData.playTime: 160898.813 -> 161115.266
+  playerData.prevHealth: 6 -> 8
+  playerData.scenesVisited[682]: null -> "Song_Tower_01"
+  playerData.silk: 3 -> 0
+
+[2025-09-10 13:51:52.2267669 +03:00:00] Change #11 detected:
+  playerData.FisherWalkerDirection: true -> false
+  playerData.FisherWalkerIdleTimeLeft: 48.22196 -> -0.00368880527
+  playerData.FisherWalkerTimer: -0.00561722228 -> 12.2016125
+  playerData.InvPaneHasNew: true -> false
+  playerData.LastSetFieldName: "encounteredLaceTower" -> "QuestPaneHasNew"
+  playerData.MaskMakerQueuedUnmasked2: false -> true
+  playerData.QuestCompletionData.savedData[43].Data.HasBeenSeen: false -> true
+  playerData.QuestPaneHasNew: true -> false
+  playerData.ToolEquips.savedData[6].Data.Slots[3].EquippedTool: "Revenge Crystal" -> "Poison Pouch"
+  playerData.belltownCrowd: 4 -> 1
+  playerData.bonetownCrowd: 6 -> 5
+  playerData.currentInvPane: 4 -> 1
+  playerData.environmentType: 0 -> 4
+  playerData.grubFarmerTimer: 1493.97046 -> 1714.77307
+  playerData.halfwayCrowd: 1 -> 3
+  playerData.hazardRespawnFacing: 0 -> 1
+  playerData.health: 0 -> 8
+  playerData.mapperAway: false -> true
+  playerData.pilgrimGroupBonegrave: 2 -> 1
+  playerData.pilgrimGroupGreymoorField: 3 -> 2
+  playerData.pilgrimGroupShellgrave: 3 -> 2
+  playerData.pilgrimRestCrowd: 1 -> 3
+  playerData.pinstressInsideSitting: false -> true
+  playerData.playTime: 161115.266 -> 161176.031
+  playerData.silk: 0 -> 1
+```
+
 ## Bugs
 
 If you find any bugs, please [open an
