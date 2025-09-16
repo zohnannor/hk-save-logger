@@ -181,12 +181,12 @@ impl Game {
                     && entry.file_type().ok()?.is_dir())
                 .then_some(entry.path())
             })
-            .unwrap_or_else(|| "default".into());
+            .unwrap_or_else(|| savefile_path.join("default"));
 
         Ok(subfolder.join(format!("user{save}.dat")))
     }
 
-    fn from_path(savefile_path: &PathBuf) -> Self {
+    fn from_path(savefile_path: &Path) -> Self {
         if savefile_path.components().any(|c| {
             let s = c.as_os_str().to_string_lossy();
             s.contains("Silksong") || s.contains("silksong")
