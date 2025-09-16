@@ -35,7 +35,7 @@ jobs:
                       artifact_name: hk-save-logger-macos
                     - os: windows
                       artifact_name: hk-save-logger-windows.exe
-        runs-on: ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}-latest
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
