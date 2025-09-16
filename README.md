@@ -6,8 +6,7 @@ Knight: Silksong.
 ## Features
 
 -   Real-time monitoring of save file changes
--   Save file decoding to JSON format
--   Save file encoding from JSON back to game format
+-   Save file decoding/encoding to/from JSON format and `.dat`
 -   Support for both Hollow Knight and Silksong
 -   Change tracking with detailed diffs
 -   Cross-platform support (Windows, macOS, Linux)
@@ -117,6 +116,11 @@ The tool creates (or appends to) two files:
 If you find any bugs, please [open an
 issue](https://github.com/zohnannor/hk-save-logger/issues/new) and describe your
 problem.
+
+## Known Issues
+
+-   Insertion of a new value into the middle of an array is rendered as a change
+    to all the subsequent values
 
 ## License
 
