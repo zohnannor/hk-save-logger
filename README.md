@@ -113,7 +113,7 @@ The tool creates (or appends to) two files:
 
 Example output:
 
-```json
+```py
 [2025-09-10 13:50:19.1053902 +03:00:00] Change #10 detected:
   playerData.HeroCorpseMarkerGuid: null -> "HtdHrq1NO02NyYPJ4NjRpA=="
   playerData.FisherWalkerDirection: false -> true
